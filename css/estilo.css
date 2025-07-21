@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,600;1,600&display=swap'); /*<-- Importei a fonte de googole fonts 
+e peguei o @ dele, você vai saber como fazer isso cara*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh; /*<--- faz com que o body ocupe 100% da tela */
+    box-sizing: border-box; /*<-- Impede elementos estarem saindo do pai(body)*/
+    background-color: black;
+    color: aliceblue;
+    
+ }
+
+ .cabecalho{
+    padding: 2% 0% 0% 15%;
+
+ }
+
+ .cabecalho__menu{
+    display: flex; /*<-- Iniciador do FlexBox*/
+    gap: 80px;
+
+ }
+
+
+ .cabecalho__menu__link{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #22D4FD;
+    text-decoration: none; /*Retira o sublinhado do link*/
+
+ }
+
+ 
+
+.apresentacao{ /*<---- Essa éa classe do Main, abaixo eu estou falando sobre as margens do conteudo dentro do Main/Pai */
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;
+    font-family: "Krona One", sans-serif; /*<-- Também no Google fonts amigão, ainda acredito que você sabe ler*/
+
+}
+
+.titulo-qualidades{
+    color: #00FFFF;
+
+ }
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column; /*<-- Aqui está falando que quer que os botões fiquem na posição de coluna e não de linha (um do lado do outro)*/
+    align-items: center; /*Alinha os itens no centro*/
+    justify-content: space-between;
+    gap: 32px; /*Está criando uma distancia entre os itens*/
+
+}
+
+.apresentacao__links__subtitulo{
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem; /*<-- O font size serve para mudar o tamanho da fonte*/
+
+}
+
+
+.apresentacao__links__navegacao{
+    display: flex;
+    justify-content: center; /*Joga o conteudo pro centro*/
+    gap: 16px; /*Está criando uma distancia entre os itens*/
+    border: 2px solid #22D4FD;
+    width: 50%;
+    text-align: center; /*<-- Alinhar o texto no centro, tu ta botando o texto no centro do botão*/
+    border-radius: 8%; /*Isso aqui serve pra arredondar a borda do botão (menor o numero é mais quadrado e maior numero arredonda)*/
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0; /*<--Na hora de falar do distanciamento entre o texto e as paredes
+    tem como você fazer isso no mesmo pedding, quando botar o segundo valor ele ja vai saquer que se trata
+    da vertical ou da horizontal, nao entendi essa parte muito bem*/
+    text-decoration: none; /*Retira o sublinhado da Ancora*/
+    color: #f6f6f6;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.apresentacao__links__link:hover{ /*<-- Tudo que estiver aqui dentro vai ser estilizado, por exemplo agora quando passar o mouse em cima do botão
+    vai fazer com que mude a cor*/
+    background-color: #272727;
+
+}
+
+.apresentacao__imagem{
+    border-radius: 16px;
+    width: 50%;
+}
+
+.especialidades{
+    color: red;
+}
+
+.rodape{
+    color: #000000;
+    background-color: #22D4FD;
+    padding: 23.64px;
+    text-align: center;/*<-- Esse aqui vai realmente alinhar o texto pro centro*/
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+
+     .cabecalho{
+    padding: 10%  ; /*cima*/
+
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse; /*<-- Troca a ordem dos elementos*/
+        padding: 5%;
+
+    }
+
+    .apresentacao__conteudo{
+        width: auto; /*Valor automatico*/
+
+    }
+
+
+}
